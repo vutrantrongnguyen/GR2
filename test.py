@@ -42,7 +42,7 @@ while True:
     #     print("Sphinx error; {0}".format(e))
     
     try:
-       you = robot_ear.recognize_google(audio, key="AIzaSyDW6GXZXssJ0X93wj-ptokIxzbittAq3IY")
+       you = robot_ear.recognize_google(audio)
     except:
        you = ""
        print("You:" + you)

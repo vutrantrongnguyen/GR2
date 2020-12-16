@@ -75,7 +75,7 @@ try:
     print("Uhmmmmm.....")
     you = r.recognize_sphinx(audio)
     print("I think you said " + you)
-    # print("Sphinx thinks you said " + r.recognize_google(audio, key="AIzaSyDW6GXZXssJ0X93wj-ptokIxzbittAq3IY"))
+    # print("Sphinx thinks you said " + r.recognize_google(audio, key="API-KEY"))
 except sr.UnknownValueError:
     print("Sphinx could not understand audio")
 except sr.RequestError as e:
