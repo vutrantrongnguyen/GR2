@@ -43,7 +43,7 @@ audio = pyaudio.PyAudio() # create pyaudio instantiation
 stream = audio.open(format = form_1,rate = samp_rate,channels = chans, \
                     input_device_index = dev_index,input = True, \
                     frames_per_buffer=chunk)
-print("Noi gi noi di")
+print("Hi, what do you want?")
 frames = []
 
 # loop through stream and append audio chunks to frame array
@@ -51,7 +51,7 @@ for ii in range(0,int((samp_rate/chunk)*record_secs)):
     data = stream.read(chunk)
     frames.append(data)
 
-print("Het gio nhe!")
+print("I got it")
 
 # stop the stream, close it, and terminate the pyaudio instantiation
 stream.stop_stream()
@@ -81,17 +81,17 @@ except sr.UnknownValueError:
 except sr.RequestError as e:
     print("Sphinx error; {0}".format(e))
 if you =="hello":
+    image = "adu.png"
+elif you == "angry":
+    image = "Capture.png"
+elif you == "sad":
     image = "sad-face.png"
-elif you == "fun":
-    image = "happy-face.png"
-elif you == "":
-    image = "happy-face.png"
 elif you == "today":
     image = "face_ID.png"
 elif you == "bye":
     pass
 else:
-    print("Noi deo gi kho nghe the")
+    print("I can't understand what you said")
     image = "sad-face.png"
 display_face(image)
 engine.say(you)
